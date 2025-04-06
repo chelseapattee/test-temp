@@ -1,0 +1,1 @@
+<p>The General Consumer is a non-technical user that wants to understand their energy usage and see where they can improve to save money or reduce their carbon footprint.</p>

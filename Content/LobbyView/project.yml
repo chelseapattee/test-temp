@@ -1,0 +1,37 @@
+title: Monitoring Lobby View
+categories:
+  - Data Visualization
+  - UI
+  - UX
+caption: Caption Here
+company: CleanSpark
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@main.jpg"
+      overview:
+        - title: Title
+          message: Lobby Dashboard
+        - title: Company
+          message: CleanSpark
+        - title: Technology
+          message: "SCALA, Play Framework, HTML, SCSS, Gulp.js, Photoshop"
+        - title: Roles
+          message: "Front-End Development, User Experience, Visual Design, Wireframes, Interface Design"
+  - type: two-images
+    attributes:
+      left: "@0-original.jpg"
+      captionLT: original
+      right: "@1a-redesign.jpg"
+      captionRT: redesign
+  - type: image-text
+    attributes:
+      header: Streamline the process
+      image: "@1b-requestForm.png"
+      paragraphs:
+        - I created a design that appeared customized to each client. In reality, it was a thoughtfully-constructed template. To further enhance efficiency, I implemented a simple "New Client Request Form" enabling a quick turnaround time when working with the business development team on new client proposals.
+  - type: image-full
+    attributes:
+      header: Deliverables
+      image: "@2-all-xs.jpg"

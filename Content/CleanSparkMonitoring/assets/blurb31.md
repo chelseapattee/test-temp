@@ -1,0 +1,4 @@
+The site overview page went through a few iterations before the final design. After contextual interviews and learning more about the users, it became clear that this overview was not a fitting display for all user groups. Two main user types and contexts for the platform emerged: Engineers, and General Consumers.
+<br>
+<br>
+Engineers were a technically-savvy user that wanted important sensor information in order to assess the health of the system and diagnose a problem. They also wanted a historical view, and the ability to look at isolated sensor point data.

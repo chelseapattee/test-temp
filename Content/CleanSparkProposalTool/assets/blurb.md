@@ -1,0 +1,11 @@
+
+### Overview
+<p><span class="drop-cap">W</span>hen a customer wants to know how to optimally reduce their energy consumption or overall energy costs, many things need to be taken into consideration. A historical set of utility data, the size of buildings, squarefoot of rooftop space that can hold solar panels, and desired ROI are just a few of such factors. Companies that provide these types of reports spend a lot of time sending an engineer out to the site to collect data, then manually entering this data and tweaking parameters to end up with a few potential options. Due to the complexity of this task, the end result is a vague estimate, leaving customers frustrated when the result is far from the projected calculations. Our company wanted to not only streamline this process, but also account for everything down to tax credits to provide a highly accurate report.</p>
+
+<br>
+<br>
+
+### THE CHALLENGE
+<p>Take a tool created by one of our engineers that was used to suggest renewable assets and project savings, and adapt it from MATLAB to a portable tablet interface, a mobile interface, a web interface, and a simplified, branded, one-page lead generator.</p>
+<br>
+<br>

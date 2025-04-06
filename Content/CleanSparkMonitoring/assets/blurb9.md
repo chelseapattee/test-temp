@@ -1,0 +1,1 @@
+The Navigation Wheel acts as a one-click crossroad for rapid movement across the dashboard and applicable energy device pages. Users can access supply and demand details for the generation and storage devices integrated into their system. This applies throughout the interface in accordance with the system's energy assets and role-based preferences.

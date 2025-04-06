@@ -1,0 +1,59 @@
+title: Lego Demo
+categories:
+  - UI
+  - UX
+  - 3D Modeling
+caption: A Microgrid Demonstration
+company: Iteros
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@main.png"
+      overview:
+        - title: Title
+          message: Lego Model Microgrid Demonstration
+        - title: Company
+          message: Iteros
+        - title: Technology
+          message: "Angular, Typescript, HTML, Angular CLI, SCSS, D3, Adobe Illustrator"
+        - title: Roles
+          message: "Design, SVG Animation, Frontend Development, User Interface Engineering"
+        - title: Team Collaborators
+          message: "Backend software developer: wrote the API routes, Mid-tier developer: hooked up the service calls"
+  - type: image-text
+    attributes:
+      content: "@blurb2.md"
+      image: "@demo-cutout.png"
+      paragraphs:
+        - The goal was to create a small-scale example of what a customer might see in the field. Specifically, our customer may be utilizing solar to drive one or more loads to reduce or offset utility costs. In practice, this setup is not ideal since factors like weather can reduce or eliminate the efficiency of the panels. Therefore the customer would likely use the grid as backup when weather conditions are not ideal. Our software is capable of enabling and disabling the load in addition to detecting when the power supplied by the panels is not sufficient. That way the customer does not have to worry about turning the system on and off.
+  - type: centered-text
+    attributes:
+      header: The Process
+      content: "@blurb3.md"
+  - type: two-images
+    attributes:
+      left: "@whiteboard.jpg"
+      right: "@wireframe2.png"
+  - type: centered-text
+    attributes:
+      content: "@blurb5.md"
+  - type: image-full
+    attributes:
+      image: "@iterosPostersAll6.jpg"
+  - type: image-text
+    attributes:
+      header: Screen in action
+      content: "@blurb6.md"
+      image: "@screen-all.gif"
+      paragraphs:
+        - "Figure out what should visually change within the digital model to mimic the physical changes for consistent mapping, and animate svg pieces that make sense (ie: wind turbine turning to indicate wind power ’generating’, solar panel becomes dark when the sun goes down or is covered by a cloud)"
+  - type: image-full
+    attributes:
+      header: Demo in action
+      image: "@legoDemo.mp4"
+  - type: image-text-right
+    attributes:
+      header: Microgrid Lab
+      content: "@blurb7.md"
+      image: "@sunValley2.jpg"

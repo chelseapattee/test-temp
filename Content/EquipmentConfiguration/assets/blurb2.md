@@ -1,0 +1,3 @@
+
+### Why this matters
+<p>Now that a definition exists in the customer’s library, any admin under that customer has access to that definition. Below is a video of how easy the process of configuring a piece of equipment becomes with this definition in place. Some properties can be overridden (such as the equipment name, address, frequency of data sampling), and others are pre-populated and cannot be changed. This enables a consistent installation of a piece of equipment across all facilities under a single customer. If a retail store has multiple chains across the country, they want to ensure consistency across all their buildings.</p>

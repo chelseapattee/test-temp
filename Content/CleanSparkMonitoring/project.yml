@@ -1,0 +1,74 @@
+title: Energy Monitoring Interface
+categories: 
+  - CS
+  - UR
+  - UX
+  - IxD
+  - VD
+caption: Bag that ugly face!
+company: CleanSpark
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@main.png"
+      overview:
+        - title: Title
+          message: Energy Monitoring Interface
+        - title: Company
+          message: CleanSpark
+        - title: Technology
+          message: SCALA, Play Framework, AngularJS, HTML, SCSS, Gulp.js, Sketch, Axure
+        - title: Roles
+          message: Front-End Development, Data Visualization, Wireframes, User Research,
+        - title: Team Collaborators
+          message: "Two backend Java developers: created system architecture, developed system intelligence, managed databases, wrote service calls; Software Intern: helped with JavaScript functions and later data charts"
+  - type: image-text
+    attributes:
+      content: "@blurb2.md"
+      image: "@beginning.png"
+      paragraphs:
+        - "This is what I had to work with. I was hired as the third member of a software team that specialized primarily in embedded control systems. It was my job to take a platform in its infancy and determine the best way to display the data, emphasizing the importance of the interface. Modifying existing code was absolutely necessary in order to re-design the UI. Ultimately, I developed new code that allowed for additional features to be seamlessly integrated and easily accessed."
+  - type: centered-text
+    attributes:
+      content: "@blurb31.md"
+  - type: image-full
+    attributes:
+      image: "@overview-v1-v2.png"
+  - type: centered-text
+    attributes:
+      content: "@blurb3.md"
+  - type: image-fifty
+    attributes:
+      image: "@consumerUI-lg.jpg"
+  - type: image-text
+    attributes:
+      content: "@blurb9.md"
+      image: "@circleNav.gif"
+  - type: centered-quote
+    attributes:
+      content: Let's back up a minute
+  - type: centered-text
+    attributes:
+      content: "@blurb5.md"
+  - type: image-full
+    attributes:
+      image: "@portfolio.png"
+  - type: centered-text
+    attributes:
+      content: "@blurb6.md"
+  - type: image-full
+    attributes:
+      image: "@nested-portfolio.png"
+      content: "@blurb3.md"
+  - type: image-text-right
+    attributes:
+      image: "@overview-v3.png"
+      content: "@blurb7.md"
+  - type: centered-text
+    attributes:
+      content: "@blurb8.md"
+  - type: image-full
+    attributes:
+      image: "@drilldown-all.png"
+      content: "@blurb3.md"

@@ -1,0 +1,9 @@
+### Overview
+<p><span class="drop-cap">T</span>he energy industry has outdated energy monitoring platforms that have not been updated since the 1970s. Most control system monitoring tools use a native application to display system information, and require technicians to install very expenive proprietary software. Furthermore, these platforms are designed for engineers and have a high learning curve. CleanSpark wanted to update this interface by making it easy on the eyes and clear to understand for both engineers and general consumers.</p>
+<br>
+<br>
+
+### The Challenge
+<p>What is the most effective and accessible display for an energy monitoring system within one facility containing various resources, while allowing for a drill-down into each resource?</p>
+<br>
+<br>

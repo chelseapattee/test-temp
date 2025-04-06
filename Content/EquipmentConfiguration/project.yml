@@ -1,0 +1,47 @@
+title: Facility Equipment Configuration
+categories:
+  - IA
+  - UX
+  - IxD
+  - UR
+  - VD
+caption: Put a caption here!
+company: Iteros
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@flowDiagram.png"
+      overview:
+        - title: Title
+          message: Faculty Equipment Configuration
+        - title: Company
+          message: Iteros
+        - title: Technology
+          message: Angular, Typescript, Node.js, HTML, SCSS, Sketch, Whiteboarding, Paper Prototypes
+        - title: Roles
+          message: Information Architecture, User Experience, Wireframes, Storyboards & Narratives, Interface Design, Software Development
+  - type: centered-text
+    attributes:
+      content: "@blurb1.md"
+  - type: two-images
+    attributes:
+      left: "@flow-v1.png"
+      captionLT: Iteration v1
+      right: "@flow-v2.png"
+      captionRT: Iteration v2
+  - type: image-full
+    attributes:
+      header: 'Implementation: view details of new definition'
+      image: "@eqDef-details.jpg"
+  - type: centered-text
+    attributes:
+      content: "@blurb2.md"
+  - type: image-full
+    attributes:
+      header: 'Adding equipment from a definition'
+      image: "@addEquip.mp4"
+  - type: image-full
+    attributes:
+      content: "@blurb3.md"
+      image: "@equipDetails.mp4"

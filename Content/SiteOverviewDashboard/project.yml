@@ -1,0 +1,73 @@
+title: Energy Management Platform
+categories:
+  - Frontend Development
+  - Data Visualization
+  - UI
+  - UX
+caption: Caption Here
+company: Iteros
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@main.png"
+      overview:
+        - title: Title
+          message: Energy Management Platform
+        - title: Company
+          message: Iteros
+        - title: Technology
+          message: "Angular, Typescript, Node.js, HTML, SCSS, Sketch"
+        - title: Roles
+          message: "User Research, Wireframes, Visual Design, Front-End Development, Information Architecture, User Experience, Interface Design"
+  - type: centered-text
+    attributes:
+      content: "@blurb4.md"
+  - type: image-full
+    header: First Iteration
+    attributes:
+      content: "@blurb1.md"
+      image: "@before.jpg"
+  - type: image-full
+    header: User Types & Context
+    attributes:
+      content: "@blurb2.md"
+      image: "@userGoals.jpg"
+  - type: image-full
+    header: Personas
+    attributes:
+      content: "@blurb3.md"
+      image: "@personas.jpg"
+  - type: centered-text
+    attributes:
+      content: "@blurb5.md"
+  - type: image-full
+    header: Widgets
+    attributes:
+      image: "@widgets-new.jpg"
+  - type: image-full
+    header: Deliverables
+    attributes:
+      image: "@screen3-out.png"
+  - type: image-full
+    attributes:
+      image: "@screen2-in.png"
+  - type: centered-quote
+    attributes:
+      content: Energy management systems are built with many features and capabilities. One of the most crucial is monitoring the health of a facility.
+  - type: centered-text
+    attributes:
+      content: "@blurb6.md"
+  - type: image-full
+    attributes:
+      image: "@wireframes.png"
+      content: "@blurb7.md"
+  - type: image-full
+    attributes:
+      image: "@screen2-portfolio-out.png"
+      content: "@blurb8.md"
+  - type: image-full
+    attributes:
+      header: Interface in action
+      image: "@site-portfolio.mp4"
+      content: "@blurb9.md"

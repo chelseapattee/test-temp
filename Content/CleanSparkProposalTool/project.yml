@@ -1,0 +1,72 @@
+title: Savings Playground
+categories: 
+  - IA
+  - UX
+  - UI
+  - UXD
+  - Wireframes
+  - Re-Design
+caption: IA, UX, UI, UXD
+company: CleanSpark
+sections:
+  - type: notes
+    attributes:
+      content: "@blurb.md"
+      image: "@main.jpg"
+      overview:
+        - title: Title
+          message: Savings Playground
+        - title: Company
+          message: CleanSpark
+        - title: Technology
+          message: AngularJS, HTML, SCSS, Gulp.js, Sketch, Whiteboarding
+        - title: Roles
+          message: Front-End Development, Information Architecture, User Experience, User Interface, Interaction Design, Wireframe Prototypes
+        - title: Collaborators
+          message: Electrical Engineer, Java Developers 
+  - type: centered-text
+    attributes:
+      content: "@blurb2.md"
+  - type: image-fifty
+    attributes:
+      image: "@1-original.png"
+  - type: image-text-right
+    attributes:
+      image: "@2-brainstorm.png"
+      content: "@blurb3.md"
+  - type: centered-text
+    attributes:
+      content: "@blurb4.md"
+  - type: two-images
+    attributes:
+      left: "@3-lofi-wireframe.png"
+      right: "@4-hifi-wireframe.png"
+  - type: image-text
+    attributes:
+      image: "@5-options-detail.png"
+      paragraphs:
+        - The greatest source of complexity was found within the options section. Many options are toggled off by default, but when toggled on reveal further configurations. Due to this opt-in functionality, a modal popup seemed ideal. This way, the options are less overwhelming and isolated from irrelevant information.
+  - type: centered-text
+    attributes:
+      content: "@blurb6.md"
+  - type: image-full
+    attributes:
+      image: "@sungevity-desktop.png"
+  - type: image-full
+    attributes:
+      image: "@sungevity-screens.png"
+  - type: centered-text
+    attributes:
+      content: "@blurb7.md"
+  - type: image-fifty
+    attributes:
+      image: "@iPad-new.jpg"
+  - type: centered-text
+    attributes:
+      content: "@blurb8.md"
+  - type: image-fifty
+    attributes:
+      image: "@5-android-long.png"
+  - type: image-full
+    attributes:
+      image: "@6-android-screens.png"
