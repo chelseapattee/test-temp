@@ -1,0 +1,41 @@
+
+
+:host ::ng-deep markdown {
+    background: greenyellow;
+    max-width: 80%;
+    margin: auto;
+    p {
+    // color: orange;
+    background: orange;
+    max-width: 500px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+  /* filepath: /Users/cpatt/src/Panda.Meow.ai/PortfolioApp/src/app/project-section-image-full/project-section-image-full.component.scss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.full-width-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.centered-image, .centered-video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.project-section--header {
+  margin-bottom: 1rem;
+}

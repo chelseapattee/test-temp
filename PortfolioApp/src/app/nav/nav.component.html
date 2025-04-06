@@ -1,0 +1,119 @@
+<header [ngClass]="hide ? 'hideme' : 'visible'"
+  [@scrollAnimation]="state">
+  <nav *ngIf="!isHome">
+    <!-- <div style="height:10px;  top:0px"></div> -->
+    <div fxFlex
+      fxLayout="row"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.lt-sm="space-between center">
+      <!-- <div fxFlex
+      fxLayout="row"
+      fxLayout.xs="column"
+      fxLayoutAlign="center center"
+      fxLayoutAlign.lt-sm="space-between center"> -->
+      <!-- <div fxFlex fxLayout="row" fxLayoutAlign="center center" fxLayoutAlign.lt-sm="space-between center"> -->
+      <div fxFlex
+        fxShow
+        fxHide.xs
+        class="home-link"
+        (click)="routeHome()"
+        class="text-left">
+        <h1 id="glow"
+          class="navbar-brand"><img src="assets/images/logo-white.svg">CHELSEA PATTEE</h1>
+      </div>
+      <div fxFlex
+        fxShow.xs
+        fxHide.gt-xs
+        class="home-link"
+        (click)="routeHome()"
+        class="text-left">
+        <h1 id="glow"
+          class="navbar-brand"><img src="assets/images/logo-white.svg"></h1>
+      </div>
+      <!-- <div fxFlex="50"> -->
+      <!-- <div fxFlex="50">
+                <a mat-raised-button *ngFor="let item of menuItems" routerLink="{{item.link}}">
+                    {{item.name | uppercase}}
+                </a>
+            </div> -->
+      <div *ngIf="!isProjectDetail"
+        fxFlex
+        class="text-right">
+        <button fxShow
+          fxHide.xs
+          mat-button
+          (click)="seeProjects();">PROJECTS</button>
+        <a mat-button
+          fxShow
+          fxHide.xs
+          *ngFor="let item of menuItems"
+          href="{{item.link}}">
+                    {{item.name | uppercase}}
+                </a>
+        <button fxShow.xs
+          fxHide.gt-xs
+          mat-icon-button
+          [matMenuTriggerFor]="mainMenu"><mat-icon>menu</mat-icon></button>
+        <mat-menu #mainMenu="matMenu">
+          <button (click)="seeProjects();"
+            mat-menu-item>PROJECTS</button>
+          <button *ngFor="let item of menuItems"
+            mat-menu-item
+            routerLink="{{item.link}}">  {{item.name | uppercase}}</button>
+        </mat-menu>
+
+      </div>
+      <div *ngIf="isProjectDetail"
+        fxFlex
+        class="text-right">
+        <!-- <app-search-bar></app-search-bar> -->
+        <button fxShow
+          mat-button
+          (click)="seeProjects();">PROJECTS</button>
+        <button mat-icon-button
+          [matMenuTriggerFor]="projectMenu"><mat-icon style="color: #e9e9e9">keyboard_arrow_down</mat-icon></button>
+        <mat-menu #projectMenu="matMenu">
+          <button *ngFor="let project of projects"
+            mat-menu-item
+            (click)="seeProjectDetails(project);">{{project.title}}</button>
+        </mat-menu>
+
+        <!-- <button fxShow.xs
+          fxHide.gt-xs
+          mat-icon-button
+          [matMenuTriggerFor]="mainMenu"><mat-icon>menu</mat-icon></button> -->
+        <mat-menu #mainMenu="matMenu">
+          <button (click)="seeProjects();"
+            mat-menu-item>PROJECTS</button>
+          <button *ngFor="let item of menuItems"
+            mat-menu-item
+            routerLink="{{item.link}}">  {{item.name | uppercase}}</button>
+        </mat-menu>
+
+      </div>
+      <!-- <button mat-icon-button -->
+      <!-- (click)="snav.toggle()"><mat-icon>menu</mat-icon></button> -->
+    </div>
+    <!-- <mat-sidenav-container>
+      <mat-sidenav #snav
+        [mode]="'over'"
+        fixedTopGap="56">
+        <mat-nav-list>
+          <a mat-list-item>item</a>
+          <a mat-list-item>item</a>
+          <a mat-list-item>item</a>
+          <a mat-list-item>item</a>
+        </mat-nav-list>
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <h1>SIDENAV CONTENT!!!!</h1>
+        <p>blaaaaahhhh</p>
+      </mat-sidenav-content>
+    </mat-sidenav-container> -->
+  </nav>
+  <!-- <section class="progress-bar"> -->
+  <!-- <mat-progress-bar [color]="'primary'" [mode]="progressBarMode"> -->
+  <!-- </mat-progress-bar> -->
+  <!-- </section> -->
+</header>

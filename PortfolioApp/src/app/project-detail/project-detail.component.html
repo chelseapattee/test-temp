@@ -1,0 +1,97 @@
+<div *ngIf="project">
+    <div role="main"
+      class="">
+      <!-- <carousel-component></carousel-component> -->
+      <project-header [project]="project"></project-header>
+  
+      <div *ngFor="let section of project.sections; let last = last;">
+        <project-section-notes *ngIf="section.type === 'notes'"
+          class="item"
+          [image]="asset(section.attributes.image) ?? undefined"
+          [content]="asset(section.attributes.content) ?? undefined"
+          [overview]="section.attributes.overview"></project-section-notes>
+
+        <div [ngSwitch]="section.type"
+          id="fade-element"
+          class="item"
+          data-scroll-reveal="enter">
+          <project-section-image-text *ngSwitchCase="'image-text'"
+            class="item" 
+            id="fade-element"
+            data-scroll-reveal="enter"
+            [header]="section.attributes.header"
+            [image]="asset(section.attributes.image) ?? undefined"
+            [paragraphs]="section.attributes.paragraphs">
+          </project-section-image-text>
+  
+          <!-- <project-section-image-text-right *ngSwitchCase="'image-text-right'"
+            class="item" 
+            data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="center-bottom"
+            [header]="section.attributes.header"
+            [content]="asset(section.attributes.content) ?? undefined"
+            [image]="asset(section.attributes.image) ?? undefined"></project-section-image-text-right> -->
+
+            <project-section-image-text-right *ngSwitchCase="'image-text-right'"
+            class="item" 
+            id="fade-element"
+            [header]="section.attributes.header"
+            [content]="asset(section.attributes.content) ?? undefined"
+            [image]="asset(section.attributes.image) ?? undefined"></project-section-image-text-right>
+  
+          <project-section-centered-text *ngSwitchCase="'centered-text'"
+            class="item"
+            id="fade-element"
+            [content]="asset(section.attributes.content) ?? undefined"></project-section-centered-text>
+  
+          <project-section-centered-quote *ngSwitchCase="'centered-quote'"
+            class="item"
+            id="fade-element"
+
+            [content]="section.attributes.content"></project-section-centered-quote>
+  
+          <!-- <project-section-centered-image *ngSwitchCase="'centered-image'"
+            class="item"
+            [header]="section.header"
+            [image]="asset(section.image)"></project-section-centered-image>-->
+  
+          <project-section-two-images *ngSwitchCase="'two-images'"
+            class="item"
+         
+            [left]="asset(section.attributes.left) ?? undefined"
+            [captionLT]="section.attributes.captionLT"
+            [right]="asset(section.attributes.right) ?? undefined"
+            [captionRT]="section.attributes.captionRT"
+            [leftB]="asset(section.attributes.leftB) ?? undefined"
+            [captionLB]="section.attributes.captionLB"
+            [rightB]="asset(section.attributes.rightB) ?? undefined"
+            [captionRB]="section.attributes.captionRB">
+          </project-section-two-images>
+  
+          <!--<project-section-three-images *ngSwitchCase="'three-images'"
+            class="item"
+            [header]="section.header"
+            [left]="asset(section.left)"
+            [leftCaption]="section.leftCaption"
+            [center]="asset(section.center)"
+            [centerCaption]="section.centerCaption"
+            [right]="asset(section.right)"
+            [rightCaption]="section.rightCaption"></project-section-three-images>-->
+  
+          <project-section-image-fifty *ngSwitchCase="'image-fifty'"
+            class="item"
+            [header]="section.attributes.header"
+            [image]="asset(section.attributes.image) ?? undefined"></project-section-image-fifty>
+  
+          <project-section-image-full *ngSwitchCase="'image-full'"
+            class="item"
+            [header]="section.attributes.header"
+            [content]="section.attributes.content ? asset(section.attributes.content) ?? undefined : undefined"
+            [image]="asset(section.attributes.image) ?? undefined"></project-section-image-full> 
+  
+        </div>
+        <br *ngIf="last">
+      </div>
+      <project-callout [projects]="related"></project-callout>
+    </div>
+  </div>
+  

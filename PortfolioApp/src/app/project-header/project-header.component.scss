@@ -1,0 +1,166 @@
+// $em: 16px;
+//default mixins
+.wrapper {
+    padding-top: 51px;
+  }
+  
+  @mixin transformT($val...) {
+    -ms-transform: translate($val);
+    -moz-transform: translate($val);
+    -webkit-transform: translate($val);
+    transform: translate($val);
+  }
+  
+  @mixin transformST($val1, $val2...) {
+    -ms-transform: scale($val1) translate($val2);
+    -moz-transform: scale($val1) translate($val2);
+    -webkit-transform: scale($val1) translate($val2);
+    transform: scale($val1) translate($val2);
+  }
+  
+  @mixin media-max($val) {
+    @media screen and (max-width: $val) {
+      @content;
+    }
+  }
+  
+  @mixin transition($val...) {
+    transition: $val;
+    -webkit-transition: $val;
+    -moz-transition: $val;
+  }
+  
+  ///* column styles */
+  // .col-2 {
+  //   display: inline-block;
+  //   width: 50%;
+  // }
+  // .col-4 {
+  //   display: inline-block;
+  //   width: 25%;
+  // }
+  // THIS FILE DEPENDANT ON THE "_mixins.scss" MODULE
+  
+  /*///////////////////////// responsive styling /////////////////////////*/
+  
+  .col-3-2-1 {
+    display: inline-block;
+    width: 33.3333333333%;
+  }
+  
+  // @include media-max(800px) {
+  //   .col-3-2-1 {
+  //     display: inline-block;
+  //     width: 50%;
+  //   }
+  // }
+  // @include media-max(540px) {
+  //   .col-3-2-1 {
+  //     display: block;
+  //     width: 100%;
+  //   }
+  // }
+  /////main//////
+  //defaults
+  //pixels
+  $pageWrap: 1600px;
+  //colors
+  $darkFuschia: #4A273F;
+  $darkPurple: #2C1D37;
+  $black: #000;
+  $white: #fff;
+  $yellow: #faa209;
+  $blue: #3bb1b2;
+  $pink: #e6226c;
+  // $fadedBlack: rgba(0, 0, 0, .6);
+  $fadedBlack: rgb(45, 45, 45);
+  $color-list: $yellow,
+  $blue,
+  $pink;
+  $offWhite: rgba(240, 240, 240, 1);
+  //prerequisites
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    @include transition(.6s all ease-in-out);
+  }
+  
+  /////////////////////////////////////////////
+  // document properties //////////////////////
+  /////////////////////////////////////////////
+  
+  /* body */
+  
+  // body {
+  //   margin: 0;
+  //   color: rgba(50, 50, 50, 1);
+  //   background-color: $offWhite;
+  // }
+  // .parent {
+  //   position: relative;
+  // }
+  // .section-shadow {
+  //   box-shadow: 0 -3*$em 3*$em -3*$em black;
+  // }
+  .section-black {
+    background-color: $fadedBlack;
+  }
+  
+  // .section-white {
+  //   background-color: $white;
+  // }
+  // .section-purple {
+  //   background-color: $darkPurple;
+  // }
+  // .section-fuschia {
+  //   background-color: $darkFuschia;
+  // }
+  // .space-exception {
+  //   position: relative;
+  //   margin: 0 0 -5*$em;
+  // }
+  .page-wrap {
+    max-width: $pageWrap;
+    margin: auto;
+  }
+  
+  // .shadow-wrap {
+  //   z-index: 1000;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 50%;
+  //   @include transformT(-50%, 0);
+  //   width: 100%;
+  //   height: 100%;
+  //   max-width: 1600px;
+  //   box-shadow: 0 0 3*$em 0 black;
+  //   pointer-events: none;
+  // }
+  // .left-justify {
+  //   text-align: left;
+  // }
+  // .center-justify {
+  //   text-align: center;
+  // }
+  // .right-justify {
+  //   text-align: right;
+  // }
+  // .hero-image {
+  //   background-position: center;
+  //   background-size: cover;
+  //   height: 37vw;
+  //   max-height: 37.5*$em;
+  // }
+  .hero-image {
+    // display: block;
+    margin: 0 auto;
+    max-height: calc(100vh - 250px);
+    // max-width: calc(70vw-200px);
+    max-width: calc(100vw);
+    background-size: cover;
+    background-position: center;
+    height: 37vw;
+    // position: relative;
+    // width: 55%;
+  }

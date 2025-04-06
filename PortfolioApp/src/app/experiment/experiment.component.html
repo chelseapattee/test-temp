@@ -1,0 +1,98 @@
+<div *ngIf="project">
+    <div role="main"
+      class="">
+      <!-- <carousel-component></carousel-component> -->
+      <project-header [project]="project"></project-header>
+  
+      <div *ngFor="let section of project.sections; let last = last;">
+        <project-section-notes *ngIf="section.type === 'notes'"
+          class="item"
+          [header]="section.header"
+          [image]="asset(section.image)"
+          [content]="section.content"
+          [overview]="section.overview"></project-section-notes>
+        <div [ngSwitch]="section.type"
+          ngsReveal>
+          <!-- <div [ngSwitch]="section.type"
+          class="item"> -->
+          <!-- <project-section-notes *ngSwitchCase="'notes'"
+            class="item"
+            [header]="section.header"
+            [image]="asset(section.image)"
+            [content]="section.content"
+            [overview]="section.overview"></project-section-notes> -->
+  
+          <project-section-image-text *ngSwitchCase="'image-text'"
+            class="item"
+            [header]="section.header"
+            [image]="asset(section.image)"
+            [content]="section.content">
+          </project-section-image-text>
+  
+          <project-section-image-text-right *ngSwitchCase="'image-text-right'"
+            class="item"
+            [header]="section.header"
+            [content]="section.content"
+            [image]="asset(section.image)"></project-section-image-text-right>
+  
+  
+  
+          <project-section-centered-text *ngSwitchCase="'centered-text'"
+            class="item"
+            [header]="section.header"
+            [content]="section.content"></project-section-centered-text>
+  
+          <project-section-centered-quote *ngSwitchCase="'centered-quote'"
+            class="item"
+            [header]="section.header"
+            [content]="section.content"></project-section-centered-quote>
+  
+          <project-section-centered-image *ngSwitchCase="'centered-image'"
+            class="item"
+            [header]="section.header"
+            [image]="asset(section.image)"></project-section-centered-image>
+  
+          <project-section-two-images *ngSwitchCase="'two-images'"
+            class="item"
+            [header]="section.header"
+            [left]="asset(section.left)"
+            [captionLT]="section.captionLT"
+            [right]="asset(section.right)"
+            [captionRT]="section.captionRT"
+            [leftB]="asset(section.leftB)"
+            [captionLB]="section.captionLB"
+            [rightB]="asset(section.rightB)"
+            [captionRB]="section.captionRB">
+          </project-section-two-images>
+          <!--
+          <project-section-two-images *ngSwitchCase="'two-images'"
+            [image]="asset(section.image)"></project-section-two-images> -->
+  
+          <project-section-three-images *ngSwitchCase="'three-images'"
+            class="item"
+            [header]="section.header"
+            [left]="asset(section.left)"
+            [leftCaption]="section.leftCaption"
+            [center]="asset(section.center)"
+            [centerCaption]="section.centerCaption"
+            [right]="asset(section.right)"
+            [rightCaption]="section.rightCaption"></project-section-three-images>
+  
+          <project-section-image-fifty *ngSwitchCase="'image-fifty'"
+            class="item"
+            [header]="section.header"
+            [image]="asset(section.image)"></project-section-image-fifty>
+  
+          <project-section-image-full *ngSwitchCase="'image-full'"
+            class="item"
+            [header]="section.header"
+            [content]="section.content"
+            [image]="asset(section.image)"></project-section-image-full>
+  
+        </div>
+        <br *ngIf="last">
+      </div>
+      <project-callout [projects]="related"></project-callout>
+    </div>
+  </div>
+  
