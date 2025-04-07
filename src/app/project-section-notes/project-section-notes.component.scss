@@ -1,0 +1,61 @@
+.project-notes {
+  background-color: #231f20;
+  padding: 4em 5%;
+  text-align: center;
+
+  dt {
+    color: #999;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+  }
+
+  dd {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 2em;
+
+    &.no-margin {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container {
+  padding: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  figure {
+    margin: 2em 0;
+    
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  }
+}
+
+.centered_copy_block {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+@media (min-width: 1240px) {
+  .project-notes {
+    text-align: left;
+    padding: 8em 0;
+    position: relative;
+
+    dd, dt {
+      max-width: 265px;
+    }
+
+    dd {
+      color: #5a5a5a;
+    }
+  }
+}

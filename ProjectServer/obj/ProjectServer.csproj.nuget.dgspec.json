@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/ProjectServer.csproj": {}
+    "/Users/cpatt/src/test-temp/ProjectServer/ProjectServer.csproj": {}
   },
   "projects": {
-    "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/ProjectServer.csproj": {
+    "/Users/cpatt/src/test-temp/ProjectServer/ProjectServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/ProjectServer.csproj",
+        "projectUniqueName": "/Users/cpatt/src/test-temp/ProjectServer/ProjectServer.csproj",
         "projectName": "ProjectServer",
-        "projectPath": "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/ProjectServer.csproj",
+        "projectPath": "/Users/cpatt/src/test-temp/ProjectServer/ProjectServer.csproj",
         "packagesPath": "/Users/cpatt/.nuget/packages/",
-        "outputPath": "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/obj/",
+        "outputPath": "/Users/cpatt/src/test-temp/ProjectServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/cpatt/.nuget/NuGet/NuGet.Config"

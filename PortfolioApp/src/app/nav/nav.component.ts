@@ -44,7 +44,7 @@ import { Project } from '../shared/project.model';
 
 export class NavComponent {
   menuItems = [
-      { link: 'contact', name: 'Contact' }
+    { link: 'contact', name: 'Contact' }
   ];
   projects: Project[] | undefined;
   Project: Project = <Project>{};
@@ -60,39 +60,20 @@ export class NavComponent {
     this.projectService.getAllProjects().subscribe((projects: Array<Project>) => {
       this.projects = projects;
     });
-
-
   }
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
-    // const blah = window.
-
-    // scrollDirection = number;
-    // console.log('component position ' + componentPosition);
-    // console.log('scroll position' + scrollPosition);
-    // console.log('scrollY ' + window.scrollY);
-    // if (scrollPosition >= componentPosition) {
-    //   this.state = 'hide';
-    // } else {
-    //   this.state = 'show';
-    // }
 
     if (pageYOffset > this.lastScrollTop) {
-
       this.dir = 'down';
       this.state = 'hide';
-      // this.showNav = false;
     } else {
       this.dir = 'up';
       this.state = 'show';
-      // this.showNav = true;
-
-
     }
     this.lastScrollTop = scrollPosition;
-    // console.log('direction' + this.dir);
   }
 
   get hide(): Boolean {
@@ -104,8 +85,6 @@ export class NavComponent {
   }
 
   get isHome(): Boolean {
-    //  console.log('isHome; ' + window.location.pathname == ('/') );
-
     return window.location.pathname == ('/'); // A little hacky :(
   }
 

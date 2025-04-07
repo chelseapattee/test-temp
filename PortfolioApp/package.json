@@ -8,7 +8,10 @@
     "build:prod": "ng build --configuration production",
     "start:prod": "ng build --configuration production && serve -s dist/portfolio-app",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "dev": "ng serve --proxy-config src/proxy.conf.json",
+    "start:dev": "ng serve --configuration development"
+
   },
   "private": true,
   "dependencies": {
@@ -23,6 +26,10 @@
     "@angular/platform-browser": "^17.3.0",
     "@angular/platform-browser-dynamic": "^17.3.0",
     "@angular/router": "^17.3.0",
+    "@ngrx/effects": "^17.1.1",
+    "@ngrx/entity": "^17.1.1",
+    "@ngrx/store": "^17.1.1",
+    "@ngrx/store-devtools": "^17.1.1",
     "cors": "^2.8.5",
     "ng-scrollreveal": "^2.2.0",
     "ngx-markdown": "^17.1.1",

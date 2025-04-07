@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "J/0RtoXntPtH/x9geAsZSnCsdJrm8RJfrXoL7t5gnmQeN3+T0Sl0wYoysoRAy4ghIBzkIwd5bdcaPvncaMTRRw==",
+  "dgSpecHash": "LcvWEi34nIzzl7heK9KbBd6f/euI8DvIY0n1BDMz2DY8gUqV8Gg7e0lRxonSwYNkWSk1C9slHGA9CQwZK2qmzg==",
   "success": true,
-  "projectFilePath": "/Users/cpatt/src/Panda.Meow.ai/ProjectServer/ProjectServer.csproj",
+  "projectFilePath": "/Users/cpatt/src/test-temp/ProjectServer/ProjectServer.csproj",
   "expectedPackageFiles": [
     "/Users/cpatt/.nuget/packages/microsoft.aspnetcore.openapi/8.0.3/microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
     "/Users/cpatt/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
