@@ -10,70 +10,68 @@ import { Router } from '@angular/router';
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
+import { Store } from '@ngrx/store';
+import { loadProjects, selectProject } from '../store/project.actions';
+import { selectAllProjects, selectProjectLoading } from '../store/project.selectors';
+import { LoadingSpinnerComponent } from '../shared/components/loading-spinner/loading-spinner.component';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-project-list',
   standalone: true,
-  imports: [MatGridListModule, CommonModule, LoadingComponent],
-  templateUrl: './project-list.component.html',
-  styleUrl: './project-list.component.scss',
+  imports: [
+    MatGridListModule, 
+    CommonModule, 
+    LoadingComponent,
+    LoadingSpinnerComponent
+  ],
+  template: `
+  <app-loading-spinner [loading]="(loading$ | async) ?? false"></app-loading-spinner>    
+    <div *ngIf="!(loading$ | async)" class="content" fxLayout="row" fxLayoutAlign="center center">
+      <mat-grid-list [cols]="columnNum" rowHeight="fit" gutterSize="3px">
+        <mat-grid-tile *ngFor="let project of projects$ | async; trackBy: trackByFn">
+          <img [src]="previewURL(project)" [alt]="project.title" (click)="seeProjectDetails(project)" />
+          <mat-grid-tile-footer fxHide.xs>{{project.title}}</mat-grid-tile-footer>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+  `,
   providers: [ProjectService]
 })
 export class ProjectListComponent {
-  projects: Project[] = [];
-  newProjectForm: FormGroup;
-  showFirst: boolean = false;
-  showLast: boolean = false;
+  projects$ = this.store.select(selectAllProjects);
+  loading$ = this.store.select(selectProjectLoading);
   columnNum = 2;
-  @ViewChild('form') myNgForm = null; // just to call resetForm method
+  @ViewChild('form') myNgForm = null;
 
-  constructor(private projectService: ProjectService,
-              private dialog: MatDialog,
-              private router: Router,
-              private formBuilder: FormBuilder,
-              private  mq: BreakpointObserver,
-              private media: MediaObserver
-            ) {
-    this.newProjectForm = this.formBuilder.group({
-      'name': ['', [Validators.required]],
-      'alterEgo': ['', [Validators.required]]
-    });
-
-    this.projectService.getAllProjects().subscribe((projects: Array<Project>) => {
-      this.projects = projects.sort((a, b) => {
-        return b.id.localeCompare(a.id);
-      });
-    });
-
+  constructor(
+    private store: Store,
+    private router: Router,
+    private media: MediaObserver
+  ) {
+    this.store.dispatch(loadProjects());
+    this.projects$ = this.store.select(selectAllProjects);
+    this.loading$ = this.store.select(selectProjectLoading).pipe(
+      map((loading) => loading ?? false) // Ensure a default value of `false`
+    );
+    
     media.asObservable()
-    .subscribe((changes: MediaChange[]) => {
-      for (var i = 0; i < changes.length; i++) {
-        const change = changes[i];
-        console.log(change.mqAlias);
-        if (change.mqAlias == 'xs') {
-          this.columnNum = 1;
-          this.showFirst = false;
-          this.showLast = false;
-        } else if (change.mqAlias == 'sm'  ) {
-          this.columnNum = 2;
-          this.showFirst = false;
-          this.showLast = true;
-        } else {
-          this.columnNum = 3;
-          this.showFirst = true;
-          this.showLast = true;
+      .subscribe((changes: MediaChange[]) => {
+        for (let change of changes) {
+          if (change.mqAlias === 'xs') {
+            this.columnNum = 1;
+          } else if (change.mqAlias === 'sm') {
+            this.columnNum = 2;
+          } else {
+            this.columnNum = 3;
+          }
         }
-      }
-    });
-
+      });
   }
 
-  headerURL(project: Project): string {
-    return Project.headerURL(project);
-  }
-
-  thumbnailURL(project: Project): string {
-    return Project.thumbnailURL(project);
+  trackByFn(index: number, project: Project): string {
+    return project.id!;
   }
 
   previewURL(project: Project): string {
@@ -81,6 +79,7 @@ export class ProjectListComponent {
   }
 
   seeProjectDetails(project: Project): void {
-      this.router.navigate([AppConfig.routes.projects + '/' + project.id]);
+    this.store.dispatch(selectProject({ projectId: project.id! }));
+    this.router.navigate([AppConfig.routes.projects + '/' + project.id]);
   }
 }

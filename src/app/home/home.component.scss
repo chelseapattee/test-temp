@@ -1,0 +1,106 @@
+:host {
+  display: block;
+  background-image: linear-gradient(135deg, rgb(106, 17, 203) 0%, rgb(37, 117, 252) 100%);
+}
+
+.content {
+  height: 100vh;
+  color: rgba(254, 254, 254, 0.65);
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  color: rgba(254, 254, 254, 0.65);
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: 44px;
+  line-height: 48px;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 10px;
+  color: rgba(254, 254, 254, 0.65);
+}
+
+a {
+  border-bottom: 2px solid #fefefe;
+  transition: opacity 400ms ease-out;
+  color: #fefefe;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.div-mark {
+  margin-top: 5%;
+  margin-right: 5%;
+  float: right;
+  height: 9em;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.div-info {
+  position: relative;
+  margin-top: 15%;
+  margin-left: 10%;
+  float: left;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-size: 40px;
+  }
+  p {
+    font-size: 24px;
+  }
+  .div-info {
+    margin-right: 7%;
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 38px;
+    line-height: 44px;
+  }
+  .div-mark {
+    margin-right: 7%;
+  }
+  .div-info {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 479px) {
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .div-mark {
+    margin-left: 7%;
+    float: left;
+  }
+}

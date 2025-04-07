@@ -7,7 +7,9 @@ import {Project} from './project.model';
 import {throwError, Observable, map, tap, catchError} from 'rxjs';
 import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ProjectService {
   private headers: HttpHeaders;
   private projectsUrl: string;
